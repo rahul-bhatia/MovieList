@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import { increment } from './actions/increment';
+import { increment, decrement} from './actions/increment';
 
 export const Counter = () => {
     const dispatch=useDispatch();
@@ -9,7 +9,7 @@ export const Counter = () => {
         <div>
             <h1>Total Movies : {count}</h1>
             <button onClick={()=>dispatch(increment())}>+</button>
-            <button>-</button>
+            <button onClick={()=>dispatch(decrement())}>-</button>
         </div>
     )
 }
